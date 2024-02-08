@@ -52,7 +52,7 @@ pipeline
                          sh 'whoami'
                         sh 'pwd'
                       sh 'echo "======================="'
-                    kubeconfig(serverUrl: 'https://192.168.49.2:8443') {
+                   kubeconfig(credentialsId: 'kubernetes-secret-file', serverUrl: 'https://192.168.49.2:8443') {
                         sh 'whoami'
                         sh 'pwd'
                     // some block
