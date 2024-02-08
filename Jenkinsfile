@@ -49,8 +49,12 @@ pipeline
               {
                    script
                   {
-
+                         sh 'whoami'
+                        sh 'pwd'
+                      sh 'echo "======================="'
                     kubeconfig(credentialsId: 'kubernetes-secret-file', serverUrl: 'https://192.168.49.2:8443') {
+                        sh 'whoami'
+                        sh 'pwd'
                     // some block
                     sh 'kubectl apply -f deployment-service.yml'
                         
